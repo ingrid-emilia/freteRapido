@@ -1,0 +1,41 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.5",
+        "vite": "^4.0.0"
+    },
+
+    "recipient":{
+        "address":{
+           "zipcode":"29161-376"
+        }
+     },
+     "volumes":[
+        {
+           "category":7,
+           "amount":1,
+           "unitary_weight":5,
+           "price":349,
+           "sku":"abc-teste-123",
+           "height":0.2,
+           "width":0.2,
+           "length":0.2
+        },
+        {
+           "category":7,
+           "amount":2,
+           "unitary_weight":4,
+           "price":556,
+           "sku":"abc-teste-527",
+           "height":0.4,
+           "width":0.6,
+           "length":0.15
+        }
+     ]
+}
