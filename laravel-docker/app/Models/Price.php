@@ -1,25 +1,13 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace App\Models;
 
-class CreatePriceTable extends Migration
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Price extends Model
 {
-    public function up()
-    {
-        Schema::create('price', function (Blueprint $table) {
-            $table->id();
-            $table->string('carrier_name');
-            $table->string('service');
-            $table->integer('deadline');
-            $table->decimal('price', 8, 2);
-            $table->timestamps();
-        });
-    }
+    use HasFactory;
 
-    public function down()
-    {
-        Schema::dropIfExists('price');
-    }
+    protected $fillable = ['carrier_name', 'service', 'deadline', 'price'];
 }
