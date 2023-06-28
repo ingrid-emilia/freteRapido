@@ -13,7 +13,7 @@ class FareController extends Controller
     {
         // Validação dos dados
 
-        $request->date([
+        $request->validate([
             'recipient.address.zipcode' => 'required',
             'volumes' => 'required|array',
         ]);
@@ -67,5 +67,4 @@ class FareController extends Controller
         return response()->json($metrics);
     }
 
-        // Gravar as cota
 }  
