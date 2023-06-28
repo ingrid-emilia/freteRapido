@@ -10,7 +10,7 @@ class CreateFareTable extends Migration
     {
         Schema::create('fare', function (Blueprint $table) {
             $table->id();
-            $table->string('Frete_Rapido');
+            $table->string('carrier_name');
             $table->string('service');
             $table->integer('deadline');
             $table->decimal('price', 8, 2);
